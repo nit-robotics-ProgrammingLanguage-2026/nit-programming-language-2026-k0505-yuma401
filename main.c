@@ -3,14 +3,21 @@
 int main(void)
 {
     int input;
+
+    // キーボードから整数を入力する
     scanf("%d", &input);
-    if (!(input >= 0 && input < 10))
+
+    // 0以上10未満ではない場合はOK
+    if (input < 0 || input >= 10)
     {
         printf("OK");
     }
-    else
+
+    // 0以上10未満の場合はNG
+    if (input >= 0 && input < 10)
     {
         printf("NG");
     }
+
     return 0;
 }
